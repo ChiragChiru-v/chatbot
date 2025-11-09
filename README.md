@@ -99,8 +99,8 @@ npm install
 cd server
 node server.js
 ```
-**
-5️⃣ Run the frontend**
+
+** 5️⃣ Run the frontend**
 
 In a new terminal:
 ```
