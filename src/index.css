@@ -211,3 +211,36 @@ button.ghost {
     transform: rotate(360deg);
   }
 }
+/*select element styles*/
+select {
+  background-color: #1a1a1a;
+  color: #d8b4fe;
+  border: 1px solid #6d28d9;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-radius: 12px;
+  padding: 8px 14px;
+}
+
+select:hover,
+select:focus {
+  border-color: #a855f7;
+  background-color: #111;
+  box-shadow: 0 0 6px #a855f7;
+}
+
+/* Option styling */
+select option {
+  background-color: #1a1a1a;
+  color: #e9d5ff;
+}
+
+/*  make the dropdown arrow purple */
+select::-ms-expand {
+  background: none;
+  border: none;
+}

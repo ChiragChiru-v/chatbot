@@ -20,13 +20,13 @@ app.post("/api/chat", async (req, res) => {
 
     // ✅ Convert messages to Gemini "history" format
     const history = messages.map((msg) => ({
-      role: "model",
+      role: msg.role,
       parts: [{ text: msg.text }],
     }));
 
     // Create chat instance
     const chat = ai.chats.create({
-      model: "gemini-2.5-flash",
+      model,
       history,
     });
 

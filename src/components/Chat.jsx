@@ -7,12 +7,12 @@ export default function Chat() {
   const [messages, setMessages] = useState([
     {
       id: crypto.randomUUID(),
-      role: "assistant",
+      role: "model",
       text: "Hi! I’m your AI assistant. Ask me anything. 🧠💬",
     },
   ]);
   const [input, setInput] = useState("");
-  const [model, setModel] = useState("gpt-4.1-mini");
+  const [model, setModel] = useState("gemini-2.5-flash");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const listRef = useRef(null);
@@ -49,7 +49,7 @@ export default function Chat() {
         ...m,
         {
           id: crypto.randomUUID(),
-          role: "assistant",
+          role: "model",
           text: text || "(No response)",
         },
       ]);
@@ -123,7 +123,10 @@ export default function Chat() {
                   className="ghost"
                 >
                   <option value="gemini-2.5-flash">gemini-2.5-flash</option>
-                  <option value="gemini-2.5-flash">gemini-2.5-flash</option>
+                  <option value="gemini-2.5-pro">gemini-2.5-pro</option>
+                  <option value="gemini-2.5-flash-lite">
+                    gemini-2.5-flash-lite
+                  </option>
                 </select>
                 <button
                   className="btn"
@@ -140,7 +143,7 @@ export default function Chat() {
           </div>
           <div className="small" style={{ marginTop: 8 }}>
             Backend: <code>{import.meta.env.VITE_API_BASE || "/api"}</code> •
-            Set <code>OPENAI_API_KEY</code> on the server.
+            {/* Set <code>OPENAI_API_KEY</code> on the server. */}
           </div>
         </div>
       </div>
